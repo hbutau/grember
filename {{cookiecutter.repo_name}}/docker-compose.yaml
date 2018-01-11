@@ -1,0 +1,6 @@
+web:
+  image: {{cookiecutter.repo_name}}
+  volumes:
+  -.:/code
+  ports:
+    -"8000:80"
