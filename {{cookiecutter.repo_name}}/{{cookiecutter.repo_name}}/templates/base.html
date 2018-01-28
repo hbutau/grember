@@ -1,0 +1,32 @@
+{% raw %} {% load staticfiles %} {% endraw %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{% block title %} Bare - Start Bootstrap Template {% endblock title %}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% raw %}{% static 'css/bootstrap.min.css' %}{% endraw %}" rel="stylesheet">
+    <link href="{% raw %}{% static 'css/project.css' %}{% endraw %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+    {% raw %} {% include "navbar.html" %} {% endraw %}
+    {% raw %} {% block content %} {% endraw %}
+    {% raw %} {% endblock content %} {% endraw %}
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% raw %} {% static 'js/jquery.min.js' %} {% endraw %}"></script>
+    <script src="{% raw %}{% static 'js/popper.min.js' %} {% endraw %}"></script>
+    <script src="{% raw %}{% static 'js/bootstrap.min.js' %} {% endraw %}"></script>
+
+</body>
+
+</html>

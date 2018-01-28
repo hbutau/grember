@@ -13,14 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
+from django.urls import path
 
-from graphene_django.views import GraphQLView 
+from graphene_django.views import GraphQLView
 
 from schema import schema
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^api/v1', GraphQLView.as_view(graphiql=True, schema=schema)),
+    path('', include('{{ cookiecutter.repo_name }}.urls'),),
+    path(r'admin/', admin.site.urls),
+    path(r'api/v1', GraphQLView.as_view(graphiql=True, schema=schema)),
 ]

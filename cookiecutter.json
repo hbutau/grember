@@ -1,4 +1,9 @@
 {
     "repo_name": "repo_name",
-    "project_name": "project_name"
+    "project_name": "project_name",
+    "user_name": "user_name",
+    "python_version": "python3.6",
+    "email": "email",
+    "project_description": "what is your project about",
+    "project_author": "author"
 }
