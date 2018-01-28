@@ -24,3 +24,5 @@ yarn install
 
 cp node_modules/bootstrap/dist/css/bootstrap.min.css {{cookiecutter.repo_name}}/static/css
 cp -r node_modules/bootstrap/dist/js {{cookiecutter.repo_name}}/static/
+
+rm -fr node_modules
