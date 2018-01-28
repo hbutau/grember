@@ -27,7 +27,6 @@ cp -r node_modules/bootstrap/dist/js {{cookiecutter.repo_name}}/static/
 
 rm -fr node_modules
 
-cd {{cookiecutter.repo_name}}
 
 echo "Activating virtualenv & starting django server"
 source venv/bin/activate
