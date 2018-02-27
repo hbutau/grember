@@ -26,7 +26,7 @@ except ImportError:
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS += [
     '{{cookiecutter.repo_name}}',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'graphene_django',
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE += [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

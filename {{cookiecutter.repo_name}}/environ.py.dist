@@ -15,6 +15,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+INSTALLED_APPS = [
+    'debug_toolbar',
+    ]
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -22,3 +26,12 @@ DATABASES = {
     }
 }
 
+# debug_toolbar
+INTERNAL_IPS = [
+    '127.0.0.1',
+    '0.0.0.0',
+    ]
+
+MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    ]

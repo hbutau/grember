@@ -13,9 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
 
 from graphene_django.views import GraphQLView
 
@@ -26,3 +28,9 @@ urlpatterns = [
     path(r'admin/', admin.site.urls),
     path(r'api/v1', GraphQLView.as_view(graphiql=True, schema=schema)),
 ]
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns += [
+        path('__debug__/', include(debug_toolbar.urls)),
+        ]
