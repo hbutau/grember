@@ -13,12 +13,12 @@ SECRET_KEY = 'please put a strong key here!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': '{{cookiecutter.repo_name}}',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': '{{cookiecutter.repo_name}}.db',
     }
 }
 

@@ -31,4 +31,12 @@ rm -fr node_modules
 echo "Activating virtualenv & starting django server"
 source venv/bin/activate
 python manage.py migrate
+
+echo "Creating superuser {{cookiecutter.user_name}}"
+python manage.py createsuperuser --username {{cookiecutter.user_name}} --email {{cookiecutter.email}}
+
+git init .
+git add .
+git commit -m 'initial commit'
+
 python manage.py runserver

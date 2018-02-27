@@ -1,4 +1,5 @@
-Django==2.0b1
+Django==2.0.2
+django-environ
 django-filter==1.0.4
 djangorestframework==3.7.1
 drf-schema-adapter==0.9.42
